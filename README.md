@@ -19,37 +19,18 @@ Se inicializan dos arreglos (`x_approx` y `y_approx`) que almacenarán las coord
 Para cada término `n` de la serie (desde 1 hasta `n_terms`), se suma tal que:
 
 - Una componente de coseno al eje **x**:  
-  $$
-  x_n(t) = \frac{r}{n} \cos(n t)
-  $$
+![alt text](image.png)
 
 - Una componente de seno al eje **y**:  
-  $$
-  y_n(t) = \frac{r}{n} \sin(n t)
-  $$
+![alt text](image-1.png)
 
 Cuantos más términos se sumen, **más precisa será la figura** respecto a un círculo.
 
 ### 2. **Rotación de la Figura**
 
-Una vez obtenida la aproximación, se realiza una **rotación de 90° (o $\frac{π}{2}$ radianes)** usando la matriz de rotación 2D:
+Una vez obtenida la aproximación, se realiza una **rotación de 90° (o π/2 radianes)** usando la matriz de rotación 2D:
 
-$$
-\begin{bmatrix}
-x_{rot} \\
-y_{rot}
-\end{bmatrix}
-=
-\begin{bmatrix}
-\cos(\theta) & -\sin(\theta) \\
-\sin(\theta) & \cos(\theta)
-\end{bmatrix}
-\cdot
-\begin{bmatrix}
-x_{approx} \\
-y_{approx}
-\end{bmatrix}
-$$
+![alt text](image-2.png)
 
 Esto da como resultado un cambio de orientación en la figura generada.
 
